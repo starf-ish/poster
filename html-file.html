@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>新式粿条宣传海报</title>
+  <link rel="stylesheet" href="style.css">
+  	<style>
+	body {
+  font-family: 'Arial', sans-serif;
+  background: #fff8ef;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.poster {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border: 5px solid #eebf99;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.2);
+}
+
+h1 {
+  color: #d64541;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #555;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.comparison {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.box {
+  width: 40%;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #fef6e4;
+}
+
+.traditional {
+  border: 2px solid #aaa;
+}
+
+.modern {
+  border: 2px solid #ff6f61;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px 0;
+}
+
+.selling-points {
+  background: #fff0db;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #ff6f61;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e55442;
+}
+
+#promoMessage {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #008000;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 20px;
+  color: #d64541;
+}
+
+    </style>
+</head>
+<body>
+
+  <div class="poster">
+    <h1>传统的味道，创新的体验！</h1>
+    <h2>—— 重新定义你的粿条记忆！</h2>
+
+    <div class="comparison">
+      <div class="box traditional">
+        <h3>传统粿条</h3>
+        <ul>
+          <li>经典炒制</li>
+          <li>搭配固定</li>
+          <li>普通包装</li>
+        </ul>
+      </div>
+      <div class="box modern">
+        <h3>新式粿条</h3>
+        <ul>
+          <li>多种新口味：抹茶、咖喱、麻辣</li>
+          <li>自选酱料，个性搭配</li>
+          <li>创意环保外卖盒</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="selling-points">
+      <h3>🔥 推销手段</h3>
+      <ul>
+        <li>🎁 买一送一（限时优惠）</li>
+        <li>🧑‍🍳 个性化定制服务</li>
+        <li>🌟 明星代言：<strong>@王一博</strong></li>
+      </ul>
+    </div>
+
+    <button id="promoBtn">立即领取优惠券！</button>
+    <p id="promoMessage"></p>
+
+    <footer>吃粿条，也要吃出态度！</footer>
+  </div>
+
+  <script>
+		document.getElementById("promoBtn").addEventListener("click", function() {
+  const messages = [
+    "🎉 恭喜！你获得了一张买一送一优惠券！",
+    "🔥 优惠券已发送至你的邮箱！",
+    "🎁 领取成功！快来尝尝我们的新式粿条吧～"
+  ];
+  const randomIndex = Math.floor(Math.random() * messages.length);
+  document.getElementById("promoMessage").textContent = messages[randomIndex];
+});
+
+</script>
+</body>
+</html>
